@@ -127,7 +127,10 @@ def predict(person: Test):
     row["scor_medical"] = scor
 
     # === Vector NLP binarizat din labels_extrase
-    labels_vector = mlb_nlp.transform(labels_extrase)[0]
+    if not labels_extrase:
+        labels_vector = np.zeros(len(mlb_nlp.classes_))
+    else:
+        labels_vector = mlb_nlp.transform([labels_extrase])[0]
     labels_df = pd.DataFrame([labels_vector], columns=mlb_nlp.classes_)
 
     # === Transformă în DataFrame
