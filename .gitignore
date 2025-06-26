@@ -1,0 +1,12 @@
+
+__pycache__/main.cpython-312.pyc
+
+.DS_Store
+
+model/__pycache__/Test.cpython-312.pyc
+
+model/__pycache__/CardioPerson.cpython-312.pyc
+
+model/__pycache__/DiabetesPerson.cpython-312.pyc
+
+utils/__pycache__/compute_scor_medical.cpython-312.pyc

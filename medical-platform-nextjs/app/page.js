@@ -6,6 +6,9 @@ export default async function Home() {
 
   const {data: {user}, error} = await supabase.auth.getUser();
 
+  if (!user){
+    return "User not found! Please authenticate first";
+  }
   console.log(user)
 
   return (

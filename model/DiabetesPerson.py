@@ -1,9 +1,9 @@
 from pydantic import BaseModel
 from typing import List, Optional
 
-class Test(BaseModel):
+class DiabetesPerson(BaseModel):
     varsta: int
-    sex: int
+    sex: int  # 0 = barbat, 1 = femeie
     greutate: float
     inaltime: float
     circumferinta: float
@@ -12,17 +12,13 @@ class Test(BaseModel):
     slabesc_greu: int
     ma_ingras_usor: int
     grasime_abdominala: int
-    oboseala: int
     urinare_nocturna: int
     pofte_dulce: int
     foame_necontrolata: int
     lipsa_energie: int
 
-    hipertensiune: int
     ficat_gras: int
-    dislipidemie: int
-    sop: int
+    sop: int  # sindrom ovare polichistice
 
-    text: str
-
-    scor_medical: Optional[float] = None  # fă-l opțional aici
+    text: str  # pentru extragerea etichetelor NLP
+    scor_medical: Optional[float] = None  # opțional, calculat dacă lipsește
