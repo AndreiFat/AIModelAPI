@@ -3,7 +3,7 @@ from typing import List, Optional
 
 class DiabetesPerson(BaseModel):
     varsta: int
-    sex: int  # 0 = barbat, 1 = femeie
+    sex: int  # 1 = barbat, 0 = femeie
     greutate: float
     inaltime: float
     circumferinta: float

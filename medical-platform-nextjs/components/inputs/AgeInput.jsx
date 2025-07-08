@@ -1,10 +1,10 @@
 'use client'
 
-export default function AgeInput() {
+export default function AgeInput({className}) {
     return (
-        <div className="form-control w-full max-w-xs">
+        <div className="form-control w-full">
             <label className="label">
-                <span className="label-text font-semibold">Vârsta:</span>
+                <span className="label-text font-semibold">Vârsta</span>
             </label>
             <input
                 type="number"
@@ -26,7 +26,7 @@ export default function AgeInput() {
                         e.target.value = e.target.value.slice(0, 3);
                     }
                 }}
-                className="input input-bordered input-primary w-full"
+                className={`input input-bordered w-full ${className}`}
                 required
             />
         </div>

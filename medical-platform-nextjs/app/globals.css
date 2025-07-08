@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
 @plugin "daisyui" {
-  themes: all;
+    themes: all;
+}
+
+.motion-anim {
+    will-change: opacity, transform;
 }

@@ -1,8 +1,8 @@
 'use client'
 
-export default function NumericInput({ name, label, placeholder, min = 0, max = 300 }) {
+export default function NumericInput({name, label, placeholder, min = 0, max = 300, className = ''}) {
     return (
-        <div className="form-control w-full max-w-xs">
+        <div className="form-control w-full">
             <label className="label">
                 <span className="label-text font-semibold">{label}</span>
             </label>
@@ -26,7 +26,7 @@ export default function NumericInput({ name, label, placeholder, min = 0, max = 
                         e.target.value = e.target.value.slice(0, 3)
                     }
                 }}
-                className="input input-bordered input-primary w-full"
+                className={`input input-bordered w-full ${className}`}
                 required
             />
         </div>

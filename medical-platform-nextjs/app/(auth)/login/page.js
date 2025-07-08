@@ -1,19 +1,23 @@
-import {login, signup} from "@/app/(auth)/actions";
-import LoginGoogleButton from "@/components/buttons/LoginGoogleButton";
+import PageLayout from "@/components/layout/PageLayout";
+import LoginForm from "@/components/forms/LoginForm";
 
-export default function LoginPage() {
+export const metadata = {
+    title: "Autentifică-te în platformă",
+    description: "Page for LoginForm",
+};
+
+export default async function LoginPage() {
     return (
-        <div>
-        <form>
-            <label htmlFor="email">Email:</label>
-            <input id="email" name="email" type="email" required />
-            <label htmlFor="password">Password:</label>
-            <input id="password" name="password" type="password" required />
-            <button formAction={login}>Log in</button>
-            <button formAction={signup}>Sign up</button>
-        </form>
-
-        <LoginGoogleButton />
+        <div className={"min-h-screen flex items-center justify-center"}>
+            <PageLayout>
+                <div className="space-y-2 text-center mb-6">
+                    <h1 className="text-3xl font-bold">Autentificare</h1>
+                    <p className="text-gray-600">
+                        Bine ai revenit! Introdu adresa de email și parola pentru a-ți accesa contul.
+                    </p>
+                </div>
+                <LoginForm/>
+            </PageLayout>
         </div>
     )
 }
