@@ -10,3 +10,5 @@ model/__pycache__/CardioPerson.cpython-312.pyc
 model/__pycache__/DiabetesPerson.cpython-312.pyc
 
 utils/__pycache__/compute_scor_medical.cpython-312.pyc
+
+medical-platform-nextjs/.idea/workspace.xml
